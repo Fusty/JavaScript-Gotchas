@@ -15,13 +15,14 @@
 Note:  Some browsers handle the above differently
 
 `typeof foo === "undefined"; // correctly determines if foo is undefined even if unset`
+
 Note:  All browsers handle this the same way
 
 ```javascript
 foo = null;
 baz = undefined;
 foo == undefined; // true
-baz == undefined; true;
+baz == undefined; // true
 foo == null; // true
 baz == null; // true
 foo === undefined; // false
