@@ -9,8 +9,6 @@
 
 `null === undefined;// false`
 
-
-
 ## Existence
 `foo === undefined; // throws error if foo is not set yet`
 
@@ -59,3 +57,47 @@ obj1.a = -100;
 val1 === -100; // false, we set val1 to a value, not a reference
 ```
 
+## Weird Values
+
+`Infinity; // Believe it or not, this is a valid value`
+
+`typeof Infinity === "number"; // And it is of type number`
+
+`Infinity > -Infinity; // true, You can negate Infinity and it would be less than positive Infinity`
+
+`(Infinity - 1) === Infinity; // true, Infinity - 1 (or any non-infinite number) is still Infinity, same with addition`
+
+`Infinity - Infinity === 0; // false, this doesn't even make sense.  Different Infinities aren't necessarily equal.`
+
+Don't trust math with Infinity.
+
+`console.log(Infinity - Infinity); // output: NaN,  This brings us to NaN (Not a Number)`
+
+`typeof NaN === "number"; // true, NaN is still a number, despite it's name.  It's just a nonsensical number`
+
+`NaN === NaN; // false, NaN isn't equal to anything, event itself.  Testing against NaN just doesn't work`
+
+`isNaN(NaN); // true, but . . . `
+
+`isNaN(undefined); // true, because it isn't a number`
+
+`isNaN(true); // false, because of coersion (I think so anyway . . .)`
+
+`isNaN(NaN) && typeof NaN === "number"; // true, this is the only way I know to test for NaN directly`
+
+### Testing for NaN
+
+```
+temp1 = NaN;
+temp2 = Infinity - Infinity;
+temp3 = "String";
+temp4 = {};
+temp5 = undefined;
+
+isNaN(temp1) && typeof temp1 === "number"; // true
+isNaN(temp2) && typeof temp2 === "number"; // true
+isNaN(temp3) && typeof temp3 === "number"; // false
+isNaN(temp4) && typeof temp4 === "number"; // false
+isNaN(temp5) && typeof temp5 === "number"; // false
+```
+NaN is weird.
