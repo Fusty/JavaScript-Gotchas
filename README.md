@@ -87,7 +87,7 @@ Don't trust math with Infinity.
 
 ### Testing for NaN
 
-```
+```javascript
 temp1 = NaN;
 temp2 = Infinity - Infinity;
 temp3 = "String";
