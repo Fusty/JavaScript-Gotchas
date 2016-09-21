@@ -12,7 +12,10 @@
 ## Existence
 `foo === undefined; // throws error if foo is not set yet`
 
+Note:  Some browsers handle the above differently
+
 `typeof foo === "undefined"; // correctly determines if foo is undefined even if unset`
+Note:  All browsers handle this the same way
 
 ```javascript
 foo = null;
