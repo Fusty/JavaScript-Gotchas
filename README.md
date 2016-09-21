@@ -13,6 +13,7 @@
 
 ## Existence
 `foo === undefined; // throws error if foo is not set yet`
+
 `typeof foo === "undefined"; // correctly determines if foo is undefined even if unset`
 
 ```javascript
