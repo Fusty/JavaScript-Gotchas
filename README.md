@@ -61,6 +61,35 @@ obj1.a = -100;
 val1 === -100; // false, we set val1 to a value, not a reference
 ```
 
+## Primitives vs Objects 
+
+**Primitives**:
+
+- string
+- number
+- boolean
+- undefined
+- null
+
+**Objects**:
+
+- everything else
+
+## Booleans
+
+**false**:
+
+- `false`
+- `null`
+- `undefined`
+- `0`
+- `""` (empty string)
+- `NaN`
+
+**true**:
+
+- everything else
+
 ## Weird Values
 
 `Infinity; // Believe it or not, this is a valid value`
