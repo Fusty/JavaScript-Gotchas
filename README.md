@@ -53,7 +53,7 @@ function logMeaning(person){
 	}
 }
 
-logMeaning(person1); // logs "Thumby has no meaning int heir life"
+logMeaning(person1); // logs "Thumby has no meaning in their life"
 logMeaning(person2); // logs "Blamby has spreading happiness as their meaning in life"
 ```
 
