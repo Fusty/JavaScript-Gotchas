@@ -31,6 +31,35 @@ foo === null; // true
 baz === null; // false
 ```
 
+You've probably seen the form for(var index in someObject){} before, but have you seen this . . .
+
+```javascript
+person1 = {
+	name: "Thumby",
+	occupation: "Developer"
+}
+
+person2 = {
+	name: "Blamby",
+	occupation: "Developer".
+	meaning: "spreading happiness"
+}
+
+function logMeaning(person){
+	if("meaning" in person){
+		console.log(person.name + " has " + " as their meaning in life");
+	}else{
+		console.log(person.name+" has no meaning in their life");
+	}
+}
+
+logMeaning(person1); // logs "Thumby has no meaning int heir life"
+logMeaning(person2); // logs "Blamby has spreading happiness as their meaning in life"
+```
+
+You can use (someString in someObject) to test for existence of a property in your object.
+NOTE:  properties set as null, undefined, false, etc. will still result in a true return using "in"
+
 ## References vs. Values
 
 ### Manipulating Object Values
