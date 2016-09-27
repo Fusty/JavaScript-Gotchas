@@ -59,6 +59,7 @@ logMeaning(person2); // logs "Blamby has spreading happiness as their meaning in
 
 You can use (someString in someObject) to test for existence of a property in your object.
 NOTE:  properties set as null, undefined, false, etc. will still result in a true return using "in"
+NOTE 2:  this only works for enumerable properties
 
 ## References vs. Values
 
