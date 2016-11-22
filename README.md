@@ -107,7 +107,7 @@ val1 === -100; // false, we set val1 to a value, not a reference
 
 - everything else (even null)
 
-## Booleans
+## Booleans (value after type conversion to boolean)
 
 **false**:
 
