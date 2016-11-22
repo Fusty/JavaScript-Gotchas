@@ -123,32 +123,32 @@ val1 === -100; // false, we set val1 to a value, not a reference
 - everything else
 
 ## Weird Values
+```javascript
+Infinity; // Believe it or not, this is a valid value
 
-`Infinity; // Believe it or not, this is a valid value`
+typeof Infinity === "number"; // And it is of type number
 
-`typeof Infinity === "number"; // And it is of type number`
+Infinity > -Infinity; // true, You can negate Infinity and it would be less than positive Infinity
 
-`Infinity > -Infinity; // true, You can negate Infinity and it would be less than positive Infinity`
+(Infinity - 1) === Infinity; // true, Infinity - 1 (or any non-infinite number) is still Infinity, same with addition
 
-`(Infinity - 1) === Infinity; // true, Infinity - 1 (or any non-infinite number) is still Infinity, same with addition`
+Infinity - Infinity === 0; // false, this doesn't even make sense.  Different Infinities aren't necessarily equal.
 
-`Infinity - Infinity === 0; // false, this doesn't even make sense.  Different Infinities aren't necessarily equal.`
+//Don't trust math with Infinity.
 
-Don't trust math with Infinity.
+console.log(Infinity - Infinity); // output: NaN,  This brings us to NaN (Not a Number)
 
-`console.log(Infinity - Infinity); // output: NaN,  This brings us to NaN (Not a Number)`
+typeof NaN === "number"; // true, NaN is still a number, despite it's name.  It's just a nonsensical number
 
-`typeof NaN === "number"; // true, NaN is still a number, despite it's name.  It's just a nonsensical number`
+NaN === NaN; // false, NaN isn't equal to anything, event itself.  Testing against NaN just doesn't work
 
-`NaN === NaN; // false, NaN isn't equal to anything, event itself.  Testing against NaN just doesn't work`
+isNaN(NaN); // true, but . . . 
 
-`isNaN(NaN); // true, but . . . `
+isNaN(undefined); // true, because it isn't a number
 
-`isNaN(undefined); // true, because it isn't a number`
+isNaN(true); // false, because of coersion (I think so anyway . . .)
 
-`isNaN(true); // false, because of coersion (I think so anyway . . .)`
-
-`isNaN(NaN) && typeof NaN === "number"; // true, this is the only way I know to test for NaN directly`
+isNaN(NaN) && typeof NaN === "number"; // true, this is the only way I know to test for NaN directly
 
 ### Testing for NaN
 
