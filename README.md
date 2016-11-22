@@ -3,6 +3,7 @@
 ## Equality
 Equality comparison of different types is detailed [here](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3
 ).
+
 `0 == false; // true`
 
 `"" == false;  // true`
