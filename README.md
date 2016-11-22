@@ -102,11 +102,10 @@ val1 === -100; // false, we set val1 to a value, not a reference
 - number
 - boolean
 - undefined
-- null
 
 **Objects**:
 
-- everything else
+- everything else (even null)
 
 ## Booleans
 
