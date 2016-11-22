@@ -149,6 +149,7 @@ isNaN(undefined); // true, because it isn't a number
 isNaN(true); // false, because of coersion (I think so anyway . . .)
 
 isNaN(NaN) && typeof NaN === "number"; // true, this is the only way I know to test for NaN directly
+```
 
 ### Testing for NaN
 
